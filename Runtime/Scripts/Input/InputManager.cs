@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace FGC.Input
+namespace FreschGames.Input
 {
     public class InputManager : MonoBehaviour
     {

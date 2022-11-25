@@ -1,4 +1,4 @@
-﻿namespace FGC.Misc
+﻿namespace FreschGames.Misc
 {
     public struct Int2
     {

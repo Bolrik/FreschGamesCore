@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace FGC.Input
+namespace FreschGames.Input
 {
     [CreateAssetMenu(fileName = "Input Value", menuName = "Data/Input/new Input Value")]
     public class InputValue : ScriptableObject

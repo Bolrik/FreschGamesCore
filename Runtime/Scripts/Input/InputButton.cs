@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FGC.Input
+namespace FreschGames.Input
 {
     [CreateAssetMenu(fileName = "Input Button", menuName = "Data/Input/new Input Button")]
     public class InputButton : InputValue

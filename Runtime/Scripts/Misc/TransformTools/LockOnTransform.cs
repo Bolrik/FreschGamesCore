@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using FGC.Misc;
+using FreschGames.Misc;
 
-namespace FGC.Misc.TransformTools
+namespace FreschGames.Misc.TransformTools
 {
     public class LockOnTransform : MonoBehaviour
     {

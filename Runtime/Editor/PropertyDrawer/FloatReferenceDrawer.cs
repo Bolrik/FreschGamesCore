@@ -1,8 +1,8 @@
-﻿using FGC.Misc.Variables;
+﻿using FreschGames.Misc.Variables;
 using UnityEditor;
 using UnityEngine;
 
-namespace FGC.Editor.PropertyDrawer
+namespace FreschGames.Editor.PropertyDrawer
 {
     [CustomPropertyDrawer(typeof(FloatReference))]
     public class FloatReferenceDrawer : UnityEditor.PropertyDrawer

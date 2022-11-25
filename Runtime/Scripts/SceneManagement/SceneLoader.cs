@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace FGC.SceneManagement
+namespace FreschGames.SceneManagement
 {
     public class SceneLoader : MonoBehaviour
     {

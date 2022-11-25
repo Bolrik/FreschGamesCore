@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace FGC.SceneManagement
+namespace FreschGames.SceneManagement
 {
     [CreateAssetMenu(fileName = "Scene Loader Proxy", menuName = "Data/Scenes/new Scene Loader Proxy")]
     public class SceneLoaderProxy : ScriptableObject

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FGC.Misc
+namespace FreschGames.Misc
 {
     public class TrajectoryPreview : MonoBehaviour
     {
