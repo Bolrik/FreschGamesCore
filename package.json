@@ -1,7 +1,7 @@
 {
   "name": "com.freschgames.freschgamescore",
   "version": "1.0.0",
-  "displayName": "FreschGames Core package",
+  "displayName": "FreschGames Core",
   "description": "This is the Core package",
   "unity": "2021.3",
   "dependencies": {
