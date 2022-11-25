@@ -1,0 +1,14 @@
+{
+  "name": "com.FreschGames.Core",
+  "version": "1.0.0",
+  "displayName": "FreschGames Core package",
+  "description": "This is the Core package",
+  "unity": "2021.3.13f1",
+  "dependencies": {
+    "com.unity.inputsystem": "1.4.4"
+ },
+  "author": {
+    "name": "FreschGames",
+    "email": "FreschGames@googlemail.com"
+  }
+}

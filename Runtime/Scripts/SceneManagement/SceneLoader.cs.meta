@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4aa5228a9655ee34886c216cf399df19
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - proxy: {fileID: 11400000, guid: d02386fcacf575b42a430bfc2c1d28d4, type: 2}
+  - document: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

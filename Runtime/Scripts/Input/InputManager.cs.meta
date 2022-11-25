@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 374803a08f08e7540a3e53edec05e2d2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - move: {fileID: 11400000, guid: f1faee9bfa70c1943aee40643e894ec0, type: 2}
+  - jump: {fileID: 11400000, guid: dd8c924d443ee0e46b7c3be9f14c38f4, type: 2}
+  - viewDelta: {fileID: 11400000, guid: 2fd0af027f774464b8fb573635929e3a, type: 2}
+  - viewPoint: {fileID: 11400000, guid: 1c729a84814a7d44e958b59b25898d26, type: 2}
+  - scrollDelta: {fileID: 11400000, guid: 57531f1a51bc95f4abb438f9f57cce0c, type: 2}
+  - action01: {fileID: 11400000, guid: 4b17cbe5bac36834b91c708b0272cfc2, type: 2}
+  - action02: {fileID: 11400000, guid: d82aeade6212ff34b8ae368ae6f681f0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
