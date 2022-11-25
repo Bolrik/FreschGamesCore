@@ -11,4 +11,4 @@ ScriptedImporter:
   generateWrapperCode: 1
   wrapperCodePath: ../../Scripts/Input/CoreInputAsset.cs
   wrapperClassName: 
-  wrapperCodeNamespace: FGC.Input
+  wrapperCodeNamespace: FreschGames.Core.Input
