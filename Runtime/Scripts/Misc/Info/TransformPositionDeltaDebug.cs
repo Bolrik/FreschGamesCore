@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FreschGames.Misc.Info
+namespace FreschGames.Core.Misc.Info
 {
     public class TransformPositionDeltaDebug : MonoBehaviour
     {

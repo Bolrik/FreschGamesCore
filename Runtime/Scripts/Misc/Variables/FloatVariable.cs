@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FreschGames.Misc.Variables
+namespace FreschGames.Core.Misc.Variables
 {
     [CreateAssetMenu(fileName = "Float", menuName = "Data/Variables/new Float")]
     public class FloatVariable : ScriptableObject

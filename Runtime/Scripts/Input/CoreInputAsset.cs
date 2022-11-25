@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace FreschGames.Input
+namespace FreschGames.Core.Input
 {
     public partial class @CoreInputAsset : IInputActionCollection2, IDisposable
     {

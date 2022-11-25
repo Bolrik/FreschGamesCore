@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FreschGames.Misc.Variables
+namespace FreschGames.Core.Misc.Variables
 {
     [CreateAssetMenu(fileName = "Integer", menuName = "Data/Variables/new Integer")]
     public class IntVariable : ScriptableObject

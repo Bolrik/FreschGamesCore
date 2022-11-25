@@ -1,4 +1,4 @@
-﻿namespace FreschGames.Misc
+﻿namespace FreschGames.Core.Misc
 {
     public enum UpdateType
     {

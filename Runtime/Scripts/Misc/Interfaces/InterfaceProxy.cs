@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FreschGames.Misc
+namespace FreschGames.Core.Misc
 {
     [System.Serializable]
     public class InterfaceProxy : MonoBehaviour

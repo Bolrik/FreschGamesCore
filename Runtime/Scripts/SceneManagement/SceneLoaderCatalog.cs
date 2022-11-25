@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FreschGames.SceneManagement
+namespace FreschGames.Core.SceneManagement
 {
     [CreateAssetMenu(fileName = "Scene Loader Catalog", menuName = "Data/Scenes/new Scene Loader Catalog")]
     public class SceneLoaderCatalog : ScriptableObject
