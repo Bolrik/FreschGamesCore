@@ -7,25 +7,13 @@ namespace FreschGames.Core.SceneManagement
     [CreateAssetMenu(fileName = "Scene Loader Proxy", menuName = "Data/Scenes/new Scene Loader Proxy")]
     public class SceneLoaderProxy : ScriptableObject
     {
-        [SerializeField] private int buildIndex;
-        public int BuildIndex { get { return buildIndex; } private set { this.buildIndex = value; } }
-
-        [SerializeField] private SceneLoaderCatalog catalog;
-        public SceneLoaderCatalog Catalog { get { return catalog; } }
+        [field: SerializeField] public int SceneBuildIndexToLoad { get; private set; }
+        [field: SerializeField] private int LoadingSceneBuildIndex { get; set; }
 
 
-        [SerializeField] private int loadingSceneBuildIndex;
-        public int LoadingSceneBuildIndex { get { return loadingSceneBuildIndex; } }
-
-
-        public void Load(SceneType type)
+        public void Load(int index)
         {
-            SceneInfo info = this.Catalog.Scenes.FirstOrDefault(sceneInfo => sceneInfo.Type == type);
-            
-            if (info == null)
-                return;
-
-            this.BuildIndex = info.BuildIndex;
+            this.SceneBuildIndexToLoad = index;
 
             SceneManager.LoadScene(this.LoadingSceneBuildIndex);
         }
