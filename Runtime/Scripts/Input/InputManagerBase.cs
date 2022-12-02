@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 
 namespace FreschGames.Core.Input
 {
-    public class InputManager : MonoBehaviour
+    public abstract class InputManagerBase : MonoBehaviour
     {
-        private CoreInputAsset Input { get; set; }
+        private IInputActionCollection2 Input { get; set; }
 
         [SerializeField] private InputLink[] links;
         public InputLink[] Links { get { return links; } }
@@ -19,7 +19,7 @@ namespace FreschGames.Core.Input
 
         private void Awake()
         {
-            this.Input = new CoreInputAsset();
+            this.Input = this.GetInputAssetObject();
             this.Input.Enable();
 
             foreach (var link in this.Links)
@@ -33,10 +33,12 @@ namespace FreschGames.Core.Input
             }
         }
 
+        protected abstract IInputActionCollection2 GetInputAssetObject();
+
         private void Link(InputValue inputValue, InputAction inputAction)
         {
             InputValueUpdate inputStateUpdate = this.InputStateUpdate;
-            
+
             inputValue.Link(inputAction, ref inputStateUpdate);
 
             this.InputStateUpdate = inputStateUpdate;
