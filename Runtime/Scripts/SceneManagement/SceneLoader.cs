@@ -29,9 +29,9 @@ namespace FreschGames.Core.SceneManagement
 
         IEnumerator LoadScene()
         {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(this.Proxy.SceneBuildIndexToLoad);
+            AsyncOperation operation = SceneManager.LoadSceneAsync(this.Proxy.SceneToLoadBuildIndex);
 
-            Debug.Log($"Now Loading Scene {this.Proxy.SceneBuildIndexToLoad}");
+            Debug.Log($"Now Loading Scene {this.Proxy.SceneToLoadBuildIndex}");
 
             while (!operation.isDone)
             {
@@ -41,7 +41,7 @@ namespace FreschGames.Core.SceneManagement
                 yield return null;
             }
 
-            Debug.Log($"Done Loading Scene {this.Proxy.SceneBuildIndexToLoad}");
+            Debug.Log($"Done Loading Scene {this.Proxy.SceneToLoadBuildIndex}");
         }
     }
 }
