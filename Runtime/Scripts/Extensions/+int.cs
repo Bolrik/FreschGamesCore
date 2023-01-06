@@ -60,5 +60,10 @@
         {
             return Math.Sign(value);
         }
+
+        public static int Loop(this int value, int exclusiveMax)
+        {
+            return (value % exclusiveMax + exclusiveMax) % exclusiveMax;
+        }
     }
 }
