@@ -4,7 +4,7 @@ namespace UnityEngine
 {
     public static partial class Extension
     {
-        private static T GetComponent<T>(this Transform transform)
+        public static T GetComponent<T>(this Transform transform)
             where T : Component
         {
             if (transform.GetComponent<T>() is T t1)
