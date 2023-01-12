@@ -15,6 +15,7 @@ namespace FreschGames.Core.Input
         public void Link(InputAction inputAction, ref InputValueUpdate action)
         {
             this.InputAction = inputAction;
+            this.OnLink(ref action);
         }
         protected virtual void OnLink(ref InputValueUpdate action) { }
 
