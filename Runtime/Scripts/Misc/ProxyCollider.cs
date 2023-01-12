@@ -27,6 +27,28 @@ namespace FreschGames.Core.Misc
         public Action<Collision2D> OnCollisionExit2DEvent { get; set; }
 
 
+        public void SetProxy(Transform transform)
+        {
+            this.Proxy = transform;
+
+            this.OnTriggerEnterEvent = null;
+            this.OnTriggerStayEvent = null;
+            this.OnTriggerExitEvent = null;
+
+            this.OnCollisionEnterEvent = null;
+            this.OnCollisionStayEvent = null;
+            this.OnCollisionExitEvent = null;
+
+
+            this.OnTriggerEnter2DEvent = null;
+            this.OnTriggerStay2DEvent = null;
+            this.OnTriggerExit2DEvent = null;
+
+            this.OnCollisionEnter2DEvent = null;
+            this.OnCollisionStay2DEvent = null;
+            this.OnCollisionExit2DEvent = null;
+        }
+
         #region 2D Trigger
         private void OnTriggerEnter2D(Collider2D collision)
         {
