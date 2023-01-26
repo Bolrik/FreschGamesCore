@@ -5,7 +5,7 @@ namespace UnityEngine
     public static partial class Extension
     {
         public static T GetProxyComponent<T>(this Transform transform)
-            where T : Component
+            where T : class
         {
             if (transform.GetComponent<T>() is T t1)
             {
