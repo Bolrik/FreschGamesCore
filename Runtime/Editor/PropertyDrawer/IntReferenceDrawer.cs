@@ -1,4 +1,5 @@
-﻿using FreschGames.Core.Misc.Variables;
+﻿#if UNITY_EDITOR
+using FreschGames.Core.Misc.Variables;
 using UnityEditor;
 using UnityEngine;
 
@@ -60,3 +61,4 @@ namespace FreschGames.Core.Editor.PropertyDrawer
         }
     }
 }
+#endif
