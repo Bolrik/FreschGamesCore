@@ -42,25 +42,25 @@ namespace FreschGames.Core.Systems
         /// <summary>
         /// Is called, right before the Managers DoAwake is called.
         /// </summary>
-        protected abstract void PreAwake();
-        protected abstract void OnAwake();
+        protected virtual void PreAwake() { }
+        protected virtual void OnAwake() { }
 
         /// <summary>
         /// Is called, right before the Managers DoStart is called.
         /// </summary>
-        protected abstract void PreStart();
-        protected abstract void OnStart();
+        protected virtual void PreStart() { }
+        protected virtual void OnStart() { }
 
         /// <summary>
         /// Is called, right before the Managers DoUpdate is called.
         /// </summary>
-        protected abstract void PreUpdate();
-        protected abstract void OnUpdate();
+        protected virtual void PreUpdate() { }
+        protected virtual void OnUpdate() { }
 
         /// <summary>
         /// Is called, right before the Managers DoLateUpdate is called.
         /// </summary>
-        protected abstract void PreLateUpdate();
-        protected abstract void OnLateUpdate();
+        protected virtual void PreLateUpdate() { }
+        protected virtual void OnLateUpdate() { }
     }
 }
