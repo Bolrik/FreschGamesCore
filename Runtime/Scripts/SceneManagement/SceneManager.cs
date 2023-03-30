@@ -65,8 +65,6 @@ namespace FreschGames.Core.SceneManagement
 
             if (this.LoadCounter <= 0)
             {
-                Debug.Log("All Operations Done!");
-
                 this.IsLoading = false;
                 this.Load();
             }
