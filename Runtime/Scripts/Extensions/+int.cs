@@ -8,8 +8,6 @@
             return (int)Math.Pow(value, power);
         }
 
-
-
         public static int Clamp(this int value, int min, int max)
         {
             if (value < min)
