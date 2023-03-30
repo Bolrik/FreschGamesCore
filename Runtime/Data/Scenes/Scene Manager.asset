@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058b7163da1183a43b966c052604bec6, type: 3}
-  m_Name: Scene Loader Proxy
+  m_Name: Scene Manager
   m_EditorClassIdentifier: 
-  buildIndex: 2
-  catalog: {fileID: 11400000, guid: 9b627faa9389d7c4a8ea2c48baa07107, type: 2}
-  loadingSceneBuildIndex: 2
+  <SceneToLoadBuildIndex>k__BackingField: 0
+  <LoadingAsset>k__BackingField: {fileID: 9197481963319205126, guid: 990aa1c298e20da4fb4ea7dafe9fc975, type: 3}
+  <PanelSettings>k__BackingField: {fileID: 11400000, guid: 428be35e93b346e4ea6c2ddca4dd2c04, type: 2}

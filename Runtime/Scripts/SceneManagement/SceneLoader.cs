@@ -12,13 +12,9 @@ namespace FreschGames.Core.SceneManagement
 {
     public class SceneLoader : MonoBehaviour
     {
-        [SerializeField] private SceneLoaderProxy proxy;
-        public SceneLoaderProxy Proxy { get { return proxy; } }
-
-        [SerializeField] private UIDocument document;
-        public UIDocument Document { get { return document; } }
-
+        UIDocument Document { get; set; }
         ProgressBar Progress { get; set; }
+        int LoadIndex { get; set; }
 
         private void Start()
         {
@@ -27,21 +23,26 @@ namespace FreschGames.Core.SceneManagement
             this.StartCoroutine(this.LoadScene());
         }
 
+        public void SetData(UIDocument document, int loadIndex)
+        {
+            this.Document = document;
+            this.LoadIndex = loadIndex;
+        }
+
         IEnumerator LoadScene()
         {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(this.Proxy.SceneToLoadBuildIndex);
+            AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(this.LoadIndex);
 
-            Debug.Log($"Now Loading Scene {this.Proxy.SceneToLoadBuildIndex}");
+            Debug.Log($"Now Loading Scene {this.LoadIndex}");
 
             while (!operation.isDone)
             {
                 float progress = (operation.progress / .9f).Clamp(0, 1);
                 this.Progress.value = progress;
-
                 yield return null;
             }
 
-            Debug.Log($"Done Loading Scene {this.Proxy.SceneToLoadBuildIndex}");
+            Debug.Log($"Done Loading Scene {this.LoadIndex}");
         }
     }
 }
