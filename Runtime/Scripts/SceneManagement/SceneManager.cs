@@ -48,7 +48,10 @@ namespace FreschGames.Core.SceneManagement
             GameObject gameObject = new GameObject("Loading");
             SceneLoader sceneLoader = gameObject.AddComponent<SceneLoader>();
             UIDocument document = gameObject.AddComponent<UIDocument>();
+
+            gameObject = new GameObject("Camera");
             gameObject.AddComponent<Camera>();
+            gameObject.transform.position = new Vector3(0, 0, -10);
 
             document.visualTreeAsset = this.LoadingAsset;
             document.panelSettings = this.PanelSettings;
