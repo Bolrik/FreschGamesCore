@@ -4,9 +4,9 @@ namespace FreschGames.Core.Managers
 {
     public abstract class ManagerComponent : ScriptableObject
     {
-        public abstract void DoAwake();
-        public abstract void DoStart();
-        public abstract void DoUpdate();
-        public abstract void DoLateUpdate();
+        public virtual void DoAwake() { }
+        public virtual void DoStart() { }
+        public virtual void DoUpdate() { }
+        public virtual void DoLateUpdate() { }
     }
 }
