@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: FreschGamesCore_PanelSettings
   m_EditorClassIdentifier: 
-  themeUss: {fileID: -4733365628477956816, guid: 5f5332d6ac0d85542a168497ed53c567, type: 3}
+  themeUss: {fileID: -4733365628477956816, guid: c0c3c143209886d4191e8448776288ee, type: 3}
   m_TargetTexture: {fileID: 0}
   m_ScaleMode: 2
   m_Scale: 1
