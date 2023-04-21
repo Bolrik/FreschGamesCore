@@ -79,15 +79,13 @@ namespace FreschGames.Core.Managers
 
         protected virtual void OnEnable()
         {
-            Debug.Log($"OnEnable: {Application.isPlaying}");
-
             if (Application.IsPlaying(this))
             {
                 this.CreateSceneHook();
             }
             else if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
             {
-                UnityEditor.EditorApplication.playModeStateChanged += this.EditorApplication_playModeStateChanged;
+                UnityEditor.EditorApplication.playModeStateChanged += this.EditorApplication_PlayModeStateChanged;
 
                 return;
             }
@@ -103,13 +101,11 @@ namespace FreschGames.Core.Managers
 
         }
 
-        private void EditorApplication_playModeStateChanged(UnityEditor.PlayModeStateChange stateChange)
+        private void EditorApplication_PlayModeStateChanged(UnityEditor.PlayModeStateChange stateChange)
         {
-            Debug.Log(stateChange);
-
             if (stateChange == UnityEditor.PlayModeStateChange.EnteredPlayMode)
             {
-                UnityEditor.EditorApplication.playModeStateChanged -= this.EditorApplication_playModeStateChanged;
+                UnityEditor.EditorApplication.playModeStateChanged -= this.EditorApplication_PlayModeStateChanged;
                 this.CreateSceneHook();
             }
         }
