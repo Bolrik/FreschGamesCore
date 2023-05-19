@@ -42,7 +42,7 @@ namespace FreschGames.Core.Misc
             return value.CompareTo(this.Min) >= 0 && value.CompareTo(this.Max) <= 0;
         }
 
-        #region <= & >=
+        #region <= / >=
         public static bool operator <=(Range<T> range, T value)
         {
             bool isValid = range.IsValid(value);
@@ -65,6 +65,32 @@ namespace FreschGames.Core.Misc
         public static bool operator >=(T value, Range<T> range)
         {
             return range <= value;
+        }
+        #endregion
+
+        #region < / >
+        public static bool operator <(Range<T> range, T value)
+        {
+            bool isValid = range.IsValid(value);
+            int compare = range.Max.CompareTo(value);
+            return compare < 0 || isValid;
+        }
+
+        public static bool operator <(T value, Range<T> range)
+        {
+            return range > value;
+        }
+
+        public static bool operator >(Range<T> range, T value)
+        {
+            bool isValid = range.IsValid(value);
+            int compare = range.Min.CompareTo(value);
+            return compare > 0 || isValid;
+        }
+
+        public static bool operator >(T value, Range<T> range)
+        {
+            return range < value;
         }
         #endregion
 
