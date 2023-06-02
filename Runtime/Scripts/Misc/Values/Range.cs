@@ -37,7 +37,7 @@ namespace FreschGames.Core.Misc
             }
         }
 
-        public bool IsValid(T value)
+        public bool IsInRange(T value)
         {
             return value.CompareTo(this.Min) >= 0 && value.CompareTo(this.Max) <= 0;
         }
@@ -45,7 +45,7 @@ namespace FreschGames.Core.Misc
         #region <= / >=
         public static bool operator <=(Range<T> range, T value)
         {
-            bool isValid = range.IsValid(value);
+            bool isValid = range.IsInRange(value);
             int compare = range.Max.CompareTo(value);
             return compare <= 0 || isValid;
         }
@@ -57,7 +57,7 @@ namespace FreschGames.Core.Misc
 
         public static bool operator >=(Range<T> range, T value)
         {
-            bool isValid = range.IsValid(value);
+            bool isValid = range.IsInRange(value);
             int compare = range.Min.CompareTo(value);
             return compare >= 0 || isValid;
         }
@@ -71,9 +71,8 @@ namespace FreschGames.Core.Misc
         #region < / >
         public static bool operator <(Range<T> range, T value)
         {
-            bool isValid = range.IsValid(value);
             int compare = range.Max.CompareTo(value);
-            return compare < 0 || isValid;
+            return compare < 0;
         }
 
         public static bool operator <(T value, Range<T> range)
@@ -83,9 +82,8 @@ namespace FreschGames.Core.Misc
 
         public static bool operator >(Range<T> range, T value)
         {
-            bool isValid = range.IsValid(value);
             int compare = range.Min.CompareTo(value);
-            return compare > 0 || isValid;
+            return compare > 0;
         }
 
         public static bool operator >(T value, Range<T> range)
@@ -97,22 +95,22 @@ namespace FreschGames.Core.Misc
         #region == / !=
         public static bool operator ==(Range<T> range, T value)
         {
-            return range.IsValid(value);
+            return range.IsInRange(value);
         }
 
         public static bool operator ==(T value, Range<T> range)
         {
-            return range.IsValid(value);
+            return range.IsInRange(value);
         }
 
         public static bool operator !=(Range<T> range, T value)
         {
-            return !range.IsValid(value);
+            return !range.IsInRange(value);
         }
 
         public static bool operator !=(T value, Range<T> range)
         {
-            return !range.IsValid(value);
+            return !range.IsInRange(value);
         }
         #endregion
     }
