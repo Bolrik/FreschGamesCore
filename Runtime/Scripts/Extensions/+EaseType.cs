@@ -1,7 +1,4 @@
-﻿using FreschGames.Core.Misc.Easing;
-using FreschGames.Core.Misc.Easing.Types;
-
-namespace UnityEngine
+﻿namespace FreschGames.Core.Misc.Easing.Types
 {
     public static partial class Extension
     {

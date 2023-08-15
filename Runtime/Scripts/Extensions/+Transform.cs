@@ -19,5 +19,15 @@ namespace UnityEngine
 
             return null;
         }
+
+        public static void DestroyAllChildren(this Transform parent)
+        {
+            int childCount = parent.childCount;
+            for (int i = childCount - 1; i >= 0; i--)
+            {
+                Transform child = parent.GetChild(i);
+                GameObject.Destroy(child.gameObject);
+            }
+        }
     }
 }
