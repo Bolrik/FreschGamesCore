@@ -1,11 +1,11 @@
 {
   "name": "com.freschgames.core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "FreschGames Core",
   "description": "This is the Core package",
-  "unity": "2021.3",
+  "unity": "2022.3",
   "dependencies": {
-    "com.unity.inputsystem": "1.4.4"
+    "com.unity.inputsystem": "1.7.0"
  },
   "author": {
     "name": "FreschGames",
