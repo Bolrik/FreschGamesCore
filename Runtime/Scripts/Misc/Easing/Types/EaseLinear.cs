@@ -1,6 +1,6 @@
 ﻿namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseLinear
+    internal static class EaseLinear
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

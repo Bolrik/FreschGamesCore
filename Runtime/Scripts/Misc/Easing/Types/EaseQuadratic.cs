@@ -1,6 +1,6 @@
 ﻿namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseQuadratic
+    internal static class EaseQuadratic
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

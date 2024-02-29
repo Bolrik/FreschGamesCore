@@ -22,6 +22,14 @@
 
         #region Clamp
         /// <summary>
+        /// Clamps the float value between the 0 and 1 values.
+        /// </summary>
+        public static float Clamp01(this float value)
+        {
+            return Clamp(value, 0, 1);
+        }
+
+        /// <summary>
         /// Clamps the float value between the minimum and maximum values.
         /// </summary>
         public static float Clamp(this float value, float min, float max)

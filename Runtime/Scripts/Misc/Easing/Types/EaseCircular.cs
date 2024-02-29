@@ -2,7 +2,7 @@
 
 namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseCircular
+    internal static class EaseCircular
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

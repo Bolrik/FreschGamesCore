@@ -2,7 +2,7 @@
 
 namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseExponential
+    internal static class EaseExponential
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

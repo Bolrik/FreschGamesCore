@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseBack
+    internal static class EaseBack
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

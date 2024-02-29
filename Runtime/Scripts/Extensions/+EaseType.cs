@@ -1,4 +1,6 @@
-﻿namespace FreschGames.Core.Misc.Easing.Types
+﻿using System;
+
+namespace FreschGames.Core.Misc.Easing.Types
 {
     public static partial class Extension
     {
@@ -27,6 +29,22 @@
 
                 default:
                     return t;
+            }
+        }
+
+        public static float Evaluate(this EaseType easeType, float t, EaseDirection direction, EaseMode mode)
+        {
+            switch (mode)
+            {
+                case EaseMode.Once:
+                    return Evaluate(easeType, t.Clamp01(), direction);
+                case EaseMode.Loop:
+                    return Evaluate(easeType, t.Loop(1), direction);
+                case EaseMode.PingPong:
+                    return Evaluate(easeType, t.PingPong(1), direction);
+                case EaseMode.None:
+                default:
+                    return Evaluate(easeType, t, direction);
             }
         }
     }

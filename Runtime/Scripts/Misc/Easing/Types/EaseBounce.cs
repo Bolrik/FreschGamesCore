@@ -1,6 +1,6 @@
 ﻿namespace FreschGames.Core.Misc.Easing.Types
 {
-    public static class EaseBounce
+    internal static class EaseBounce
     {
         public static float Evaluate(float t, EaseDirection direction)
         {

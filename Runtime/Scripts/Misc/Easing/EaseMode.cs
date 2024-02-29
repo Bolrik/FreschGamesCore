@@ -2,8 +2,9 @@
 {
     public enum EaseMode
     {
-        Once = 0,
-        Loop = 1,
-        PingPong = 2
+        None = 0,
+        Once = 1,
+        Loop = 2,
+        PingPong = 3
     }
 }
