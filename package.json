@@ -1,6 +1,6 @@
 {
   "name": "com.freschgames.core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "FreschGames Core",
   "description": "This is the Core package",
   "unity": "2022.3",
@@ -9,6 +9,6 @@
  },
   "author": {
     "name": "FreschGames",
-    "email": "FreschGames@googlemail.com"
+    "email": "FreschGames.de@googlemail.com"
   }
 }
