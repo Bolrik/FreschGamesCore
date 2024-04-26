@@ -4,7 +4,7 @@
     {
         public static int GetStableHash(this string value)
         {
-            const int BaseHash = 1337 / 100;
+            const int BaseHash = 2017;
 
             unchecked
             {
