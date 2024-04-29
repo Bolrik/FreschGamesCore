@@ -1,4 +1,6 @@
-﻿namespace System
+﻿using System;
+
+namespace FreschGames.Core.RNG
 {
     public class Random
     {
