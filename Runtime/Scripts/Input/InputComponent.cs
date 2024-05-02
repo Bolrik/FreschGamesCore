@@ -15,14 +15,8 @@ namespace FreschGames.Core.Input
         /// </summary>
         private IInputActionCollection2 InputActionCollection { get; set; }
 
-        /// <summary>
-        /// An array of links between input actions and input values
-        /// </summary>
-        [SerializeField] private InputLink[] links;
-        /// <summary>
-        /// Get the links array
-        /// </summary>
-        public InputLink[] Links { get { return links; } }
+
+        [field: SerializeField] public InputValue[] InputValues { get; private set; }
 
         /// <summary>
         /// A delegate that is used to update the input values associated with this component
@@ -36,14 +30,14 @@ namespace FreschGames.Core.Input
             this.InputActionCollection.Enable();
 
             // Map each input action to an input value
-            foreach (var link in this.Links)
+            foreach (InputValue inputValue in this.InputValues)
             {
-                InputAction action = this.InputActionCollection.FindAction($"{link.Action.name}");
+                InputAction action = this.InputActionCollection.FindAction($"{inputValue.Action.name}");
 
-                if (link.Action.action == null)
-                    throw new UnityException($"No Action for Input '{link.Action}' ({link.Action.name})");
+                if (inputValue.Action.action == null)
+                    throw new UnityException($"No Action for Input '{inputValue.Action}' ({inputValue.Action.name})");
 
-                this.Link(link.Value, action);
+                this.Link(inputValue, action);
             }
         }
 

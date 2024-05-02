@@ -14,6 +14,8 @@ namespace FreschGames.Core.Input
         /// </summary>
         public InputAction InputAction { get; private set; }
 
+        [field: SerializeField] public InputActionReference Action { get; private set; }
+
         /// <summary>
         /// Whether the input was pressed, released, or is currently being held down
         /// </summary>
