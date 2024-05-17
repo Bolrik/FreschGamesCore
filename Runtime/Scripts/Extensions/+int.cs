@@ -93,5 +93,48 @@
         {
             return (value % exclusiveMax + exclusiveMax) % exclusiveMax;
         }
+
+        public static int PingPong(this int value, int left, int right)
+        {
+            if (left > right)
+            {
+                // Swap left and right if they are in the wrong order
+                int temp = left;
+                left = right;
+                right = temp;
+            }
+
+            int range = right - left;
+            int range2 = range * 2;
+
+            int delta = value - left;
+            int mod = delta % range2;
+            if (mod < 0)
+                mod += range2;
+
+            if (mod < range)
+                return left + mod;
+            else
+                return right - (mod - range);
+        }
+
+        public static int Loop(this int value, int left, int right)
+        {
+            if (left > right)
+            {
+                // Swap left and right if they are in the wrong order
+                int temp = left;
+                left = right;
+                right = temp;
+            }
+
+            int range = right - left;
+
+            int mod = (value - left) % range;
+            if (mod < 0)
+                mod += range;
+
+            return left + mod;
+        }
     }
 }

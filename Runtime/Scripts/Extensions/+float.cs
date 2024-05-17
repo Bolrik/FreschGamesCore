@@ -61,23 +61,47 @@
 
         #endregion
 
-        /// <summary>
-        /// Loops the float value within the range of 0 and the given length.
-        /// </summary>
-        public static float Loop(this float value, float length)
+        public static float PingPong(this float value, float left, float right)
         {
-            return Clamp(value - (float)Math.Floor(value / length) * length, 0.0f, length);
+            if (left > right)
+            {
+                // Swap left and right if they are in the wrong order
+                float temp = left;
+                left = right;
+                right = temp;
+            }
+
+            float range = right - left;
+            float range2 = range * 2;
+
+            float delta = value - left;
+            float mod = delta % range2;
+            if (mod < 0)
+                mod += range2;
+
+            if (mod < range)
+                return left + mod;
+            else
+                return right - (mod - range);
         }
 
-        /// <summary>
-        /// Returns the value of a ping-pong function with the given length.
-        /// </summary>
-        public static float PingPong(this float value, float length)
+        public static float Loop(this float value, float left, float right)
         {
-            value = value.Loop(length * 2F);
-            float toReturn = length - Math.Abs(value - length);
+            if (left > right)
+            {
+                // Swap left and right if they are in the wrong order
+                float temp = left;
+                left = right;
+                right = temp;
+            }
 
-            return toReturn;
+            float range = right - left;
+
+            float mod = (value - left) % range;
+            if (mod < 0)
+                mod += range;
+
+            return left + mod;
         }
 
         #region Lerp
