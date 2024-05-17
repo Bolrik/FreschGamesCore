@@ -39,9 +39,9 @@ namespace FreschGames.Core.Misc.Easing.Types
                 case EaseMode.Once:
                     return Evaluate(easeType, t.Clamp01(), direction);
                 case EaseMode.Loop:
-                    return Evaluate(easeType, t.Loop(1), direction);
+                    return Evaluate(easeType, t.Loop(0, 1), direction);
                 case EaseMode.PingPong:
-                    return Evaluate(easeType, t.PingPong(1), direction);
+                    return Evaluate(easeType, t.PingPong(0, 1), direction);
                 case EaseMode.None:
                 default:
                     return Evaluate(easeType, t, direction);
