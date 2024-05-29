@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace FreschGames.Core.Misc.Easing.Types
+namespace FreschGames.Core.Misc.Easing
 {
     internal static class EaseBack
     {

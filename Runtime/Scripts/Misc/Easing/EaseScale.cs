@@ -1,4 +1,4 @@
-    using FreschGames.Core.Misc.Easing.Types;
+    using FreschGames.Core.Misc.Easing;
     using UnityEngine;
 
 namespace FreschGames.Core.Misc.Easing

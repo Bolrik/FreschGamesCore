@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FreschGames.Core.Misc.Easing.Types
+namespace FreschGames.Core.Misc.Easing
 {
     public static partial class Extension
     {
