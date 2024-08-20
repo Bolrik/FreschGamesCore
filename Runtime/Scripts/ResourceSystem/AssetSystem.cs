@@ -2,6 +2,7 @@
 
 namespace FreschGames.Core.ResourceSystem
 {
+    [DefaultExecutionOrder(-50)]
     public class AssetSystem : MonoBehaviour
     {
         [field: SerializeField] public AssetGroup[] Groups { get; private set; }
