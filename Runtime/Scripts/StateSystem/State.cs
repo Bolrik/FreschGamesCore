@@ -21,5 +21,10 @@ namespace FreschGames.Core.StateSystem
 
             return Instance;
         }
+
+        public static void Release(Event<StateChangedEvent<T>>.GameEvent onStateChangedHandler)
+        {
+            Event<StateChangedEvent<T>>.OnEvent -= onStateChangedHandler;
+        }
     }
 }
