@@ -6,7 +6,6 @@ namespace FreschGames.Core.StateSystem
     public static class State<T>
     {
         public static T Instance { get; private set; }
-        public static Action<StateChangedEvent<T>> OnStateChanged { get; set; }
 
         public static void Assign(T instance)
         {
@@ -14,6 +13,13 @@ namespace FreschGames.Core.StateSystem
             T newState = Instance = instance;
 
             Event<StateChangedEvent<T>>.Invoke(new StateChangedEvent<T>(oldState, newState));
+        }
+
+        public static T Hook(Event<StateChangedEvent<T>>.GameEvent onStateChangedHandler)
+        {
+            Event<StateChangedEvent<T>>.OnEvent += onStateChangedHandler;
+
+            return Instance;
         }
     }
 }
