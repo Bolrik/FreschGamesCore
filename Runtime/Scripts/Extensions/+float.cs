@@ -1,6 +1,4 @@
-﻿using FreschGames.Core.Misc.Easing;
-
-namespace System
+﻿namespace System
 {
     /// <summary>
     /// Contains extension methods for the float data type.
@@ -191,17 +189,6 @@ namespace System
             float toReturn = value.MoveTowards(target, lerp);
 
             return toReturn;
-        }
-
-
-        public static float Ease(this float value, EaseType easeType, EaseDirection direction)
-        {
-            return easeType.Evaluate(value, direction);
-        }
-
-        public static float Ease(this float value, EaseType easeType, EaseDirection direction, EaseMode mode)
-        {
-            return easeType.Evaluate(value, direction, mode);
         }
     }
 }

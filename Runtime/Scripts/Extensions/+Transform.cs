@@ -1,21 +1,15 @@
-﻿using FreschGames.Core.Misc;
+﻿using FreschGames.Core;
 
 namespace UnityEngine
 {
     public static partial class Extension
     {
-        public static T GetProxyComponent<T>(this Transform transform)
+        public static T GetRelayComponent<T>(this Transform transform)
             where T : class
         {
-            if (transform.GetComponent<T>() is T t1)
-            {
-                return t1;
-            }
+            if (transform.GetComponent<T>() is T value) return value;
 
-            if (transform.GetComponent<ProxyCollider>() is ProxyCollider proxy && proxy.Proxy.GetComponent<T>() is T t2)
-            {
-                return t2;
-            }
+            if (transform.GetComponent<Proxy>() is Proxy relay && relay.GetComponent<T>() is T proxyValue) return proxyValue;
 
             return null;
         }
