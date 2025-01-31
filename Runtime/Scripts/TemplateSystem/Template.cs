@@ -1,10 +1,17 @@
 ﻿using FreschGames.Core.EventSystem;
+using UnityEngine;
 
 namespace FreschGames.Core.TemplateSystem
 {
-    public static class Template<T>
+    public static class Template<T> 
+        where T : Object
     {
         public static T Instance { get; private set; }
+
+        public static T Instantiate()
+        {
+            return GameObject.Instantiate(Instance);
+        }
 
         public static void Assign(T instance)
         {
