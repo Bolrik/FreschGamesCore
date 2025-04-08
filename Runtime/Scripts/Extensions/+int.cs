@@ -109,6 +109,7 @@
 
             int delta = value - left;
             int mod = delta % range2;
+
             if (mod < 0)
                 mod += range2;
 
